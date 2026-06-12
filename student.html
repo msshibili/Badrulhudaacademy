@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Organizations | Badrul Huda Academy</title>
+    <meta name="description"
+        content="Discover the student organizations at Badrul Huda Academy. Learn about Swabah, Nadi Dawa, and QHSA and how they foster character, leadership, and service.">
+
+    <!-- Google Fonts - Poppins Only -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AOS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* --- Premium Custom Styles for Student Organizations --- */
+        .org-header {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+
+        /* Tabs Navigation Wrapper */
+        .tabs-nav-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: var(--space-lg);
+            position: relative;
+            z-index: 10;
+        }
+
+        .tabs-nav {
+            display: flex;
+            background: white;
+            border: 1px solid var(--border);
+            padding: 8px;
+            border-radius: 50px;
+            box-shadow: var(--shadow-md);
+            gap: 8px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 14px 28px;
+            border: none;
+            background: transparent;
+            font-family: var(--font-main);
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--text-muted);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .tab-btn i {
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .tab-btn:hover {
+            color: var(--primary);
+            background: var(--bg-alt);
+        }
+
+        .tab-btn.active {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 77, 64, 0.2);
+        }
+
+        .tab-btn.active i {
+            color: var(--accent);
+        }
+
+        /* Tabs Content Panels */
+        .tab-panel {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .tab-panel.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Organization Specific Highlights */
+        .org-intro-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--space-md);
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: var(--space-lg);
+            align-items: center;
+        }
+
+        .org-tagline {
+            font-size: 1.1rem;
+            color: var(--accent-dark);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        .org-description {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .org-banner-image {
+            width: 100%;
+            height: 320px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .org-banner-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Pillars Section */
+        .pillars-title {
+            color: var(--primary);
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: var(--space-sm);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+
+        .pillars-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .pillar-card {
+            padding: var(--space-md);
+            border-radius: var(--radius);
+            background: white;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .pillar-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+
+        .pillar-card h4 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .pillar-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Details & Activity Layout */
+        .org-details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-lg);
+            margin-top: var(--space-lg);
+        }
+
+        .activities-box, .leadership-box {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: var(--space-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .box-title {
+            color: var(--primary);
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 12px;
+        }
+
+        .box-title i {
+            color: var(--accent);
+        }
+
+        .activity-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .activity-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .activity-item i {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-top: 4px;
+            background: var(--bg-alt);
+            padding: 6px;
+            border-radius: 50%;
+        }
+
+        .activity-content h5 {
+            color: var(--text-main);
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .activity-content p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Leadership Cards */
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .leader-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 12px 16px;
+            border-radius: 12px;
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .leader-card:hover {
+            border-color: var(--primary);
+            background: white;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .leader-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            box-shadow: var(--shadow-sm);
+            flex-shrink: 0;
+        }
+
+        .leader-info h5 {
+            color: var(--primary);
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .leader-info p {
+            color: var(--accent-dark);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 992px) {
+            .org-intro-card {
+                grid-template-columns: 1fr;
+            }
+            .org-banner-image {
+                height: 250px;
+            }
+            .org-details-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .tabs-nav {
+                flex-direction: column;
+                border-radius: 20px;
+                padding: 12px;
+            }
+            .tab-btn {
+                padding: 12px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.jpg" alt="Badrul Huda" id="logo-img"
+                        onerror="this.style.display='none'; document.getElementById('logo-text').style.display='block';">
+                    <div class="logo-text" id="logo-text">
+                        Badrul Huda Academy
+                        <span>Panamaram</span>
+                    </div>
+                </a>
+            </div>
+
+            <button class="mobile-nav-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav-links" id="nav-links">
+                <ul>
+                    <li class="nav-item-dropdown">
+                        <a href="about.html">About <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">About Us</a></li>
+                            <li class="nav-item-subdropdown">
+                                <a href="about.html#ventures-list" class="subdropdown-toggle">Ventures <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                                <ul class="subdropdown-menu">
+                                    <li><a href="about.html?venture=0">Panamaram Campus</a></li>
+                                    <li><a href="about.html?venture=1">Happy Shelter for Boys</a></li>
+                                    <li><a href="about.html?venture=2">Higher Study Centre for Boys and Girls</a></li>
+                                    <li><a href="about.html?venture=3">Islamic Sharee'ath College</a></li>
+                                    <li><a href="about.html?venture=4">Secondary Madrassa</a></li>
+                                    <li><a href="about.html?venture=5">Thajul Ulama Dawa College</a></li>
+                                    <li><a href="about.html?venture=6">Karimbummal Jumua Masjid</a></li>
+                                    <li><a href="about.html?venture=7">V.A.M.B Madrassa Karimbummal</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="admin.html">Admin Portal</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-dropdown">
+                        <a href="courses.html">Courses <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="courses.html">All Courses</a></li>
+                            <li><a href="courses.html#quran-studies">Quran Studies</a></li>
+                            <li><a href="courses.html#bridge-course">Bridge Course</a></li>
+                            <li><a href="courses.html#higher-studies">Higher Studies</a></li>
+                            <li><a href="courses.html#orphan-home-care">Orphan Home Care</a></li>
+                            <li><a href="courses.html#islamic-civilization">Islamic Civilization</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-dropdown">
+                        <a href="organisation.html">Organisation <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="organisation.html?tab=swabah">Swabah</a></li>
+                            <li><a href="organisation.html?tab=nadi-dawa">Nadi Dawa</a></li>
+                            <li><a href="organisation.html?tab=qhsa">QHSA</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="donations.html">Donations</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main style="padding-top: 100px;">
+
+        <!-- Professional Page Hero -->
+        <section class="hero" style="min-height: 45vh; padding-top: 80px;">
+            <div class="container hero-content" style="grid-template-columns: 1fr;">
+                <div class="hero-text" style="text-align: center; max-width: 800px; margin: 0 auto;" data-aos="fade-up">
+                    <div class="hero-tag">Venture & Leadership</div>
+                    <h1 class="hero-title" style="font-size: 3rem;">Student <span class="highlight">Organizations</span></h1>
+                    <p class="hero-description" style="margin: 0 auto var(--space-md); max-width: 650px;">
+                        Explore our student-led wings at Badrul Huda Academy, focusing on spiritual growth, creative expression, leadership training, and humanitarian service.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Organizations Section with Interactive Tabs -->
+        <section class="section-padding" style="background: var(--bg-alt); padding-top: 0;">
+            <div class="container">
+                
+                <!-- Tab Navigation Buttons -->
+                <div class="tabs-nav-container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tabs-nav">
+                        <button class="tab-btn active" onclick="switchTab(event, 'swabah')">
+                            <i class="fas fa-pen-nib"></i> SWABAH
+                        </button>
+                        <button class="tab-btn" onclick="switchTab(event, 'nadi-dawa')">
+                            <i class="fas fa-bullhorn"></i> Nadi Dawa
+                        </button>
+                        <button class="tab-btn" onclick="switchTab(event, 'qhsa')">
+                            <i class="fas fa-users"></i> QHSA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- --- SWABAH Tab Content --- -->
+                <div id="swabah" class="tab-panel active">
+                    <!-- Intro Card -->
+                    <div class="org-intro-card" data-aos="fade-up">
+                        <div>
+                            <span class="org-tagline">Literary & Cultural Club</span>
+                            <h2 style="color: var(--primary); font-size: 2.2rem; font-weight: 800; margin-bottom: 16px;">SWABAH</h2>
+                            <p class="org-description">
+                                SWABAH (meaning "morning breeze") is the literary and cultural association that fosters artistic, oratorical, and creative talents among students. Dedicated to building intellectual depth and creative expression, SWABAH provides students with platforms to showcase their artistic capacities, engage in intellectual dialogue, and nurture cultural leadership.
+                            </p>
+                            <div class="hero-btns">
+                                <a href="contact.html" class="btn btn-primary">Join SWABAH Activities</a>
+                            </div>
+                        </div>
+                        <div class="org-banner-image">
+                            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=800" alt="Literary Studies and Writing">
+                        </div>
+                    </div>
+
+                    <!-- Core Pillars -->
+                    <div style="margin-top: var(--space-lg);" data-aos="fade-up">
+                        <h3 class="pillars-title">Core Pillars of SWABAH</h3>
+                        <div class="grid-3" style="margin-top: 24px;">
+                            <div class="pillar-card">
+                                <div class="pillar-icon"><i class="fas fa-microphone-lines"></i></div>
+                                <h4>Oratorical Excellence</h4>
+                                <p>Fostering public speaking, speech training, and debater skills through structured weekly seminars.</p>
+                            </div>
+                            <div class="pillar-card">
+                                <div class="pillar-icon"><i class="fas fa-compass-drafting"></i></div>
+                                <h4>Classical Art & Calligraphy</h4>
+                                <p>Preserving Islamic calligraphy traditions (Naskh, Thuluth) and encouraging visual arts.</p>
+                            </div>
+                            <div class="pillar-card">
+                                <div class="pillar-icon"><i class="fas fa-graduation-cap"></i></div>
+                                <h4>Intellectual Inquiry</h4>
+                                <p>Developing essay writing, research skills, and poetry analysis in various languages.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Details Grid -->
+                    <div class="org-details-grid" data-aos="fade-up">
+                        <!-- Activities -->
+                        <div class="activities-box">
+                            <h4 class="box-title"><i class="fas fa-calendar-check"></i> Key Activities & Fests</h4>
+                            <ul class="activity-list">
+                                <li class="activity-item">
+                                    <i class="fas fa-star"></i>
+                                    <div class="activity-content">
+                                        <h5>Bahar-e-Huda Cultural Fest</h5>
+                                        <p>Our flagship annual cultural competition where students compete in speech, art, and poetry.</p>
+                                    </div>
+                                </li>
+                                <li class="activity-item">
+                                    <i class="fas fa-star"></i>
+                                    <div class="activity-content">
+                                        <h5>Weekly Calligraphy Circle</h5>
+                                        <p>Hands-on calligraphy training led by local masters and senior academy scholars.</p>
+                                    </div>
+                                </li>
+                                <li class="activity-item">
+                                    <i class="fas fa-star"></i>
+                                    <div class="activity-content">
+                                        <h5>"Al-Bayan" Wall Magazine</h5>
+                                        <p>A monthly wall publication showcasing student poems, essays, and translations.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Leadership -->
+                        <div class="leadership-box">
+                            <h4 class="box-title"><i class="fas fa-award"></i> Executive Committee</h4>
+                            <div class="leadership-grid">
+                                <div class="leader-card">
+                                    <div class="leader-avatar">NP</div>
+                                    <div class="leader-info">
+                                        <h5>Noufal Ahsani Perunthatta</h5>
+                                        <p>Chief Advisor & Patron</p>
+                                    </div>
+                                </div>
+                                <div class="leader-card">
+                                    <div class="leader-avatar">JS</div>
+                                    <div class="leader-info">
+                                        <h5>Sayyid Jafar Sadiq</h5>
+                                        <p>Student President</p>
+                                    </div>
+                                </div>
+                                <div class="leader-card">
+                                    <div class="leader-avatar">MA</div>
+                                    <div class="leader-info">
+                                        <h5>Muhammed Anas</h5>
+                                        <p>General Secretary</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- --- NADI DAWA Tab Content --- -->
+                <div id="nadi-dawa" class="tab-panel">
+                    <!-- Intro Card -->
+                    <div class="org-intro-card">
+                        <div>
+                            <span class="org-tagline">Mission & Community Welfare</span>
+                            <h2 style="color: var(--primary); font-size: 2.2rem; font-weight: 800; margin-bottom: 16px;">Nadi Dawa</h2>
+                            <p class="org-description">
+                                Nadi Dawa is the spiritual outreach and community service wing of Badrul Huda Academy. Focused on moral propagation, humanitarian relief, and public education, Nadi Dawa trains students to serve as compassionate guides and active contributors to society. Through seminars, community camps, and moral outreach classes, Nadi Dawa spreads positive values and supports those in need.
+                            </p>
+                            <div class="hero-btns">
+                                <a href="contact.html" class="btn btn-primary">Participate in Dawa Missions</a>
+                            </div>
+                        </div>
+                        <div class="org-banner-image">
+                            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=800" alt="Charity and Community Welfare">
+                        </div>
+                    </div>
+
+                    <!-- Core Pillars -->
+                    <div style="margin-top: var(--space-lg);">
+                        <h3 class="pillars-title">Core Pillars of Nadi Dawa</h3>
+                        <div class="grid-3" style="margin-top: 24px;">
+                            <div class="pillar-card">
+                                <div class="pillar-icon"><i class="fas fa-heart-pulse"></i></div>
+                                <h4>Moral Empowerment</h4>
+                                <p>Teaching ethics, character, and spiritual values to schools and local community circles.</p>
+                            </div>
+                            <div class="pillar-card">
+                                <div class="pillar-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                                <h4>Humanitarian Support</h4>
+                                <p>Organizing student volunteers for disaster relief, food distribution, and blood donations.</p>
+                            </div>
+                            <div class="pillar-card">
+                                <div class="pillar-icon"><i class="fas fa-book-quran"></i></div>
+                                <h4>Peace & Outreach</h4>
+                                <p>Spreading the message of harmony, coexistence, and academic enlightenment across community zones.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Details Grid -->
+                    <div class="org-details-grid">
+                        <!-- Activities -->
+                        <div class="activities-box">
+                            <h4 class="box-title"><i class="fas fa-calendar-check"></i> Outreach Programs</h4>
+                            <ul class="activity-list">
+                                <li class="activity-item">
+                                    <i class="fas fa-check-double"></i>
+                                    <div class="activity-content">
+                                        <h5>Moral Guidance Campaigns</h5>
+                                        <p>Weekly moral classes and weekend camps organized for kids and youth in Wayanad.</p>
+                                    </div>
+                                </li>
+                                <li class="activity-item">
+                                    <i class="fas fa-check-double"></i>
+                                    <div class="activity-content">
+                                        <h5>"As-Safa" Newsletter</h5>
+                                        <p>A quarterly digital publication compiling articles on ethics, family values, and modern issues.</p>
+                                    </div>
+                                </li>
+                                <li class="activity-item">
+                                    <i class="fas fa-check-double"></i>
+                                    <div class="activity-content">
+                                        <h5>Social Service Camps</h5>
+                                        <p>Annual blood donation drives, health checkup camps, and cleaning campaigns in surrounding villages.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Leadership -->
+                        <div class="leadership-box">
+                            <h4 class="box-title"><i class="fas fa-award"></i> Executive Committee</h4>
+                            <div class="leadership-grid">
+                                <div class="leader-card">
+                                    <div class="leader-avatar">US</div>
+                                    <div class="leader-info">
+                                        <h5>Usman Saquafi</h5>
+                                        <p>Chief Advisor & Patron</p>
+                                    </div>
+                                </div>
+                                <div class="leader-card">
+                                    <div class="leader-avatar">AK</div>
+                                    <div class="leader-info">
+                                        <h5>Ahmad Kabir</h5>
+                                        <p>President</p>
+                                    </div>
+                                </div>
+                                <div class="leader-card">
+                                    <div class="leader-avatar">AR</div>
+                                    <div class="leader-info">
+                                        <h5>Abdul Rahim</h5>
+                                        <p>General Secretary</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- --- QHSA Tab Content --- -->
+                <div id="qhsa" class="tab-panel">
+                    <!-- Intro Card -->
+                    <div class="org-intro-card">
+                        <div>
+                            <span class="org-tagline">Quwwathul Huda Students Association</span>
+                            <h2 style="color: var(--primary); font-size: 2.2rem; font-weight: 800; margin-bottom: 16px;">QHSA</h2>
+                            <p class="org-description">
+                                QHSA is the central student council representing the entire student body at Badrul Huda Academy. Dedicated to student welfare, venture governance, and institutional coordination, QHSA serves as a bridge between the faculty administration and the students. QHSA organizes academic initiatives, sports tournaments, and oversees hostel/mess committees.
+                            </p>
+                            <div class="hero-btns">
+                                <a href="contact.html" class="btn btn-primary">Contact QHSA Council</a>
+                            </div>
+                        </div>
+                        <div class="org-banner-image">
+                            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=800" alt="Students Union and Leadership">
+                        </div>
+                    </div>
+
+                    <!-- Core Pillars -->
+                    <div style="margin-top: var(--space-lg);">
+                        <h3 class="pillars-title">Core Pillars of QHSA</h3>
+                        <div class="grid-3" style="margin-top: 24px;">
+                            <div class="pillar-card">
+                                <div class="pillar-icon"><i class="fas fa-handshake"></i></div>
+                                <h4>Student Advocacy</h4>
+                                <p>Ensuring students' voices are heard in all academic, welfare, and residential matters.</p>
+                            </div>
+                            <div class="pillar-card">
+                                <div class="pillar-icon"><i class="fas fa-puzzle-piece"></i></div>
+                                <h4>Venture Coordination</h4>
+                                <p>Unifying the activities of all student clubs, sub-committees, and hostel wings.</p>
+                            </div>
+                            <div class="pillar-card">
+                                <div class="pillar-icon"><i class="fas fa-trophy"></i></div>
+                                <h4>Sports & Welfare</h4>
+                                <p>Promoting physical health, managing sports meets, and organizing recreational activities.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Details Grid -->
+                    <div class="org-details-grid">
+                        <!-- Activities -->
+                        <div class="activities-box">
+                            <h4 class="box-title"><i class="fas fa-calendar-check"></i> Main Initiatives</h4>
+                            <ul class="activity-list">
+                                <li class="activity-item">
+                                    <i class="fas fa-circle-check"></i>
+                                    <div class="activity-content">
+                                        <h5>Annual Sports Meet (Huda Olympiad)</h5>
+                                        <p>A multi-day sporting event covering football, cricket, track events, and indoor strategy games.</p>
+                                    </div>
+                                </li>
+                                <li class="activity-item">
+                                    <i class="fas fa-circle-check"></i>
+                                    <div class="activity-content">
+                                        <h5>Hostel & Mess Management</h5>
+                                        <p>Ensuring clean living conditions, dietary planning, and coordinating student duty rosters.</p>
+                                    </div>
+                                </li>
+                                <li class="activity-item">
+                                    <i class="fas fa-circle-check"></i>
+                                    <div class="activity-content">
+                                        <h5>Peer Study Circles</h5>
+                                        <p>Organizing extra academic coaching, exam prep tutorials, and vocabulary enhancement classes.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Leadership -->
+                        <div class="leadership-box">
+                            <h4 class="box-title"><i class="fas fa-award"></i> QHSA Student Council</h4>
+                            <div class="leadership-grid">
+                                <div class="leader-card">
+                                    <div class="leader-avatar">UM</div>
+                                    <div class="leader-info">
+                                        <h5>Usman Musliyar Kundala</h5>
+                                        <p>Patron & Chief Advisor</p>
+                                    </div>
+                                </div>
+                                <div class="leader-card">
+                                    <div class="leader-avatar">MR</div>
+                                    <div class="leader-info">
+                                        <h5>Muhammed Rafi</h5>
+                                        <p>Student Chairman</p>
+                                    </div>
+                                </div>
+                                <div class="leader-card">
+                                    <div class="leader-avatar">SB</div>
+                                    <div class="leader-info">
+                                        <h5>Shamil Bilal</h5>
+                                        <p>General Secretary</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section-padding" style="background: var(--primary); color: white; text-align: center;">
+            <div class="container" data-aos="zoom-in">
+                <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 20px;">Get Involved in Student Life</h2>
+                <p style="margin-bottom: 40px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    We believe in holistic education. Reach out to our student councils to learn more about how you can participate, lead, or support their noble initiatives.</p>
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <a href="contact.html" class="btn btn-primary"
+                        style="background: var(--accent); color: white;">Contact Student Union</a>
+                    <a href="about.html" class="btn btn-secondary"
+                        style="background: transparent; color: white; border-color: white;">Our Legacy</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h4 style="color: white; font-size: 1.5rem; margin-bottom: 20px;">Badrul Huda Academy</h4>
+                    <p style="color: #a0aec0; font-size: 0.9rem;">Illuminating hearts and minds through authentic
+                        Islamic education and academic excellence since 1998.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="organisation.html">Organisation</a></li>
+                        <li><a href="faculty.html">Faculty</a></li>
+                        <li><a href="donations.html">Donations</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="courses.html#quran-studies">Quran Studies</a></li>
+                        <li><a href="courses.html#bridge-course">Bridge Course</a></li>
+                        <li><a href="courses.html#higher-studies">Higher Studies</a></li>
+                        <li><a href="courses.html#orphan-home-care">Orphan Home Care</a></li>
+                        <li><a href="courses.html#islamic-civilization">Islamic Civilization</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-location-dot"></i><span>Panamaram, Wayanad, Kerala</span></li>
+                        <li><i class="fas fa-phone"></i><span>+91 98765 43210</span></li>
+                        <li><i class="fas fa-envelope"></i><span>info@badrulhuda.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="border-top: 1px solid #2d3748; padding-top: 30px; text-align: center; font-size: 0.85rem; color: #718096;">
+                <p>&copy; 2026 Badrul Huda Academy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Interactive Tab Switcher Logic
+        function switchTab(event, orgId) {
+            // Hide all tab panels
+            const panels = document.querySelectorAll('.tab-panel');
+            panels.forEach(panel => {
+                panel.classList.remove('active');
+            });
+
+            // Deactivate all tab buttons
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            tabButtons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Activate current clicked button and its panel
+            event.currentTarget.classList.add('active');
+            const targetPanel = document.getElementById(orgId);
+            targetPanel.classList.add('active');
+
+            // Force AOS refresh for elements inside the newly visible panel
+            if (window.AOS) {
+                AOS.refresh();
+            }
+        }
+    </script>
+</body>
+
+</html>

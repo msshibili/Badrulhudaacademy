@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badrul Huda Academy</title>
+    <meta name="description"
+        content="Badrul Huda Academy - A premier Islamic institute dedicated to empowering knowledge with faith and excellence.">
+
+    <!-- Google Fonts - Poppins Only -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AOS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.jpg" alt="Badrul Huda" id="logo-img"
+                        onerror="this.style.display='none'; document.getElementById('logo-text').style.display='block';">
+                    <div class="logo-text" id="logo-text">
+                        Badrul Huda Academy
+                        <span>Panamaram</span>
+                    </div>
+                </a>
+            </div>
+
+            <button class="mobile-nav-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav-links" id="nav-links">
+                <ul>
+                    <li class="nav-item-dropdown">
+                        <a href="about.html">About <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">About Us</a></li>
+                            <li class="nav-item-subdropdown">
+                                <a href="about.html#ventures-list" class="subdropdown-toggle">Ventures <i class="fas fa-chevron-down"
+                                        style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                                <ul class="subdropdown-menu">
+                                    <li><a href="about.html?venture=0">Panamaram Campus</a></li>
+                                    <li><a href="about.html?venture=1">Happy Shelter for Boys</a></li>
+                                    <li><a href="about.html?venture=2">Higher Study Centre for Boys and Girls</a></li>
+                                    <li><a href="about.html?venture=3">Islamic Sharee'ath College</a></li>
+                                    <li><a href="about.html?venture=4">Secondary Madrassa</a></li>
+                                    <li><a href="about.html?venture=5">Thajul Ulama Dawa College</a></li>
+                                    <li><a href="about.html?venture=6">Karimbummal Jumua Masjid</a></li>
+                                    <li><a href="about.html?venture=7">V.A.M.B Madrassa Karimbummal</a></li>
+                                </ul>
+
+                            </li>
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="admin.html">Admin Portal</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-dropdown">
+                        <a href="courses.html">Courses <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="courses.html">All Courses</a></li>
+                            <li><a href="courses.html#quran-studies">Quran Studies</a></li>
+                            <li><a href="courses.html#bridge-course">Bridge Course</a></li>
+                            <li><a href="courses.html#higher-studies">Higher Studies</a></li>
+                            <li><a href="courses.html#orphan-home-care">Orphan Home Care</a></li>
+                            <li><a href="courses.html#islamic-civilization">Islamic Civilization</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-dropdown">
+                        <a href="organisation.html">Organisation <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="organisation.html?tab=swabah">Swabah</a></li>
+                            <li><a href="organisation.html?tab=nadi-dawa">Nadi Dawa</a></li>
+                            <li><a href="organisation.html?tab=qhsa">QHSA</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="donations.html">Donations</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Professional Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text" data-aos="fade-right">
+                    <div class="hero-tag">Welcome to Badrul Huda</div>
+                    <h1 class="hero-title">Empowering Your Journey with <span class="highlight">Faith &
+                            Excellence</span></h1>
+                    <p class="hero-description">Deepen your understanding of Islam through authentic knowledge and
+                        contemporary academic rigor. Join a community of dedicated learners.</p>
+                    <div class="hero-btns">
+                        <a href="admissions.html" class="btn btn-primary">Begin Enrollment</a>
+                        <a href="courses.html" class="btn btn-secondary">Explore Programs</a>
+                    </div>
+                </div>
+                <div class="hero-image" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1590076214667-c0f353168218?auto=format&fit=crop&q=80&w=1500"
+                        alt="Islamic Study Environment">
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery/Slideshow Section -->
+        <section class="section-padding" style="background: var(--bg-alt);">
+            <div class="container">
+                <div class="section-head" data-aos="fade-up">
+                    <span>Ventures & Events</span>
+                    <h2>Photo Gallery</h2>
+                </div>
+
+                <div class="gallery-slider" data-aos="zoom-in">
+                    <div class="slider-container">
+                        <button class="slider-btn prev-btn" onclick="prevSlide()"><i
+                                class="fas fa-chevron-left"></i></button>
+
+                        <div class="slider-wrapper">
+                            <div class="slider-track" id="slider-track">
+                                <!-- Slides will be loaded from admin data -->
+                                <div class="slide"
+                                    style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); display: flex; align-items: center; justify-content: center;">
+                                    <div style="text-align: center; color: white;">
+                                        <i class="fas fa-image"
+                                            style="font-size: 4rem; margin-bottom: 20px; opacity: 0.5;"></i>
+                                        <p style="font-size: 1.1rem; opacity: 0.7;">Gallery photos will appear here</p>
+                                        <p style="font-size: 0.9rem; opacity: 0.6;"><a href="admin.html"
+                                                style="color: var(--accent);">Admin</a> can add photos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="slider-btn next-btn" onclick="nextSlide()"><i
+                                class="fas fa-chevron-right"></i></button>
+                    </div>
+
+                    <div class="slider-dots" id="slider-dots"></div>
+                </div>
+
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="admin.html" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Add Gallery Photos
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-head" data-aos="fade-up">
+                    <span>Our Academic Programs</span>
+                    <h2>Nurturing Soul & Mind</h2>
+                </div>
+
+                <div class="grid-3">
+                    <!-- Course 1 -->
+                    <article class="course-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="course-icon"><i class="fas fa-quran"></i></div>
+                        <h3>Quran Studies</h3>
+                        <p>A comprehensive study of Tajweed, Hifz, and Tafseer guided by authentic tradition and
+                            scholars.</p>
+                        <a href="admissions.html" class="btn btn-secondary btn-full">Enroll Now</a>
+                    </article>
+
+                    <!-- Course 2 -->
+                    <article class="course-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="course-icon"><i class="fas fa-scroll"></i></div>
+                        <h3>Bridge Course</h3>
+                        <p>Understanding the methodology of Hadith collection, authentication, and the life of Prophet
+                            Muhammad (PBUH).</p>
+                        <a href="admissions.html" class="btn btn-secondary btn-full">Enroll Now</a>
+                    </article>
+
+                    <!-- Course 3 -->
+                    <article class="course-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="course-icon"><i class="fas fa-balance-scale"></i></div>
+                        <h3>Higher Studies</h3>
+                        <p>In-depth exploration of Sharia laws, ethical frameworks, and practical application in
+                            contemporary society.</p>
+                        <a href="admissions.html" class="btn btn-secondary btn-full">Enroll Now</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Latest News & Updates Section -->
+        <section class="section-padding" style="background: var(--bg-alt);" id="latest-news">
+            <div class="container">
+                <div class="section-head" data-aos="fade-up">
+                    <span>Stay Informed</span>
+                    <h2>Latest News & Updates</h2>
+                    <p style="max-width: 600px; margin: 0 auto; color: var(--text-muted);">Stay up to date with the
+                        latest announcements, achievements, and important updates from Badrul Huda Academy.</p>
+                </div>
+
+                <div id="home-news-container"
+                    style="display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: var(--space-lg);"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <!-- News cards loaded dynamically -->
+                </div>
+
+                <!-- Empty state -->
+                <div id="home-news-empty" style="text-align: center; padding: 60px 20px;" data-aos="fade-up">
+                    <div
+                        style="background: white; border-radius: 24px; padding: 60px 40px; box-shadow: var(--shadow-md); max-width: 600px; margin: 0 auto;">
+                        <i class="fas fa-newspaper"
+                            style="font-size: 3.5rem; color: var(--primary); margin-bottom: 20px; opacity: 0.3;"></i>
+                        <h3 style="color: var(--primary); font-size: 1.4rem; font-weight: 700; margin-bottom: 12px;">No
+                            News Yet</h3>
+                        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6;">News and updates will
+                            appear here once published. Check back soon!</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: var(--space-lg);" data-aos="fade-up" data-aos-delay="200">
+                    <a href="news.html" class="btn btn-primary">
+                        <i class="fas fa-newspaper" style="margin-right: 8px;"></i> View All News
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section-padding" style="background: var(--primary); color: white; text-align: center;">
+            <div class="container" data-aos="zoom-in">
+                <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 20px;">Ready to Begin?</h2>
+                <p style="margin-bottom: 40px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Admissions are currently open for the 2026 Academic Year. Take the first step towards a deeper
+                    understanding.</p>
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <a href="admissions.html" class="btn btn-primary"
+                        style="background: var(--accent); color: white;">Apply Online</a>
+                    <a href="contact.html" class="btn btn-secondary"
+                        style="background: transparent; color: white; border-color: white;">Contact Office</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h4 style="color: white; font-size: 1.5rem; margin-bottom: 20px;">Badrul Huda Academy</h4>
+                    <p style="color: #a0aec0; font-size: 0.9rem;">Illuminating hearts and minds through authentic
+                        Islamic education and academic excellence since 1998.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="organisation.html">Organisation</a></li>
+                        <li><a href="faculty.html">Faculty</a></li>
+                        <li><a href="donations.html">Donations</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="courses.html#quran-studies">Quran Studies</a></li>
+                        <li><a href="courses.html#bridge-course">Bridge Course</a></li>
+                        <li><a href="courses.html#higher-studies">Higher Studies</a></li>
+                        <li><a href="courses.html#orphan-home-care">Orphan Home Care</a></li>
+                        <li><a href="courses.html#islamic-civilization">Islamic Civilization</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-location-dot"></i><span>Panamaram, Wayanad, Kerala</span></li>
+                        <li><i class="fas fa-phone"></i><span>+91 98765 43210</span></li>
+                        <li><i class="fas fa-envelope"></i><span>info@badrulhuda.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="border-top: 1px solid #2d3748; padding-top: 30px; text-align: center; font-size: 0.85rem; color: #718096;">
+                <p>&copy; 2026 Badrul Huda Academy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Load latest news on home page
+        function loadHomeNews() {
+            const news = JSON.parse(localStorage.getItem('badrulHudaNews')) || [];
+            const container = document.getElementById('home-news-container');
+            const emptyState = document.getElementById('home-news-empty');
+
+            if (!news || news.length === 0) {
+                if (container) container.style.display = 'none';
+                if (emptyState) emptyState.style.display = 'block';
+                return;
+            }
+
+            if (emptyState) emptyState.style.display = 'none';
+            if (container) container.style.display = 'grid';
+
+            // Sort by date (newest first), take top 3
+            const sorted = news.slice().sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3);
+
+            container.innerHTML = sorted.map((item, i) => {
+                const img = item.image
+                    ? `<div style="width:100%;height:200px;overflow:hidden;"><img src="${item.image}" alt="${item.title}" style="width:100%;height:100%;object-fit:cover;"></div>`
+                    : `<div style="width:100%;height:200px;background:#f1f5f9;display:flex;align-items:center;justify-content:center;"><i class="fas fa-newspaper" style="font-size:2.5rem;color:var(--border);"></i></div>`;
+                const excerpt = item.description && item.description.length > 150 ? item.description.substring(0, 150) + '...' : (item.description || '');
+                return `
+                    <article style="background:white;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-md);transition:var(--transition);border:1px solid var(--border);display:flex;flex-direction:column;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 15px 40px rgba(0,77,64,0.12)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='var(--shadow-md)';">
+                        ${img}
+                        <div style="padding:var(--space-md);flex-grow:1;display:flex;flex-direction:column;">
+                            <div style="color:var(--accent);font-size:0.85rem;font-weight:600;margin-bottom:8px;">
+                                <i class="fas fa-calendar" style="margin-right:6px;"></i>${new Date(item.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                            </div>
+                            <h3 style="color:var(--primary);font-size:1.15rem;font-weight:700;margin-bottom:10px;">${item.title}</h3>
+                            <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.6;flex-grow:1;margin-bottom:16px;">${excerpt}</p>
+                            <a href="news_article.html?id=${item.id}" style="color:var(--primary);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:var(--transition);">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.syncWithServer) {
+                window.syncWithServer(loadHomeNews);
+            } else {
+                loadHomeNews();
+            }
+        });
+    </script>
+</body>
+
+</html>

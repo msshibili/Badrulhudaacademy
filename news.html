@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Updates | Badrul Huda Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .news-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--border);
+        }
+
+        .news-card:hover {
+            box-shadow: 0 15px 40px rgba(0, 77, 64, 0.12);
+            transform: translateY(-5px);
+        }
+
+        .news-image {
+            width: 100%;
+            height: 200px;
+            background: #e2e8f0;
+            overflow: hidden;
+        }
+
+        .news-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: var(--space-md);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-date {
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .news-title {
+            color: var(--primary);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .news-description {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            flex-grow: 1;
+            margin-bottom: 16px;
+        }
+
+        .news-link {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .news-link:hover {
+            color: var(--accent);
+            transform: translateX(4px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar" id="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.jpg" alt="Badrul Huda">
+                    <div class="logo-text">Badrul Huda Academy<span>Panamaram</span></div>
+                </a>
+            </div>
+            <button class="mobile-nav-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav-links" id="nav-links">
+                <ul>
+                    <li class="nav-item-dropdown">
+                        <a href="about.html" class="active">About <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">About Us</a></li>
+                            <li class="nav-item-subdropdown">
+                                <a href="about.html#ventures-list" class="subdropdown-toggle">Ventures <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                                <ul class="subdropdown-menu">
+                                    <li><a href="about.html?venture=0">Panamaram Campus</a></li>
+                                    <li><a href="about.html?venture=1">Happy Shelter for Boys</a></li>
+                                    <li><a href="about.html?venture=2">Higher Study Centre for Boys and Girls</a></li>
+                                    <li><a href="about.html?venture=3">Islamic Sharee'ath College</a></li>
+                                    <li><a href="about.html?venture=4">Secondary Madrassa</a></li>
+                                    <li><a href="about.html?venture=5">Thajul Ulama Dawa College</a></li>
+                                    <li><a href="about.html?venture=6">Karimbummal Jumua Masjid</a></li>
+                                    <li><a href="about.html?venture=7">V.A.M.B Madrassa Karimbummal</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="news.html" class="active">News</a></li>
+                            <li><a href="admin.html">Admin Portal</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-dropdown">
+                        <a href="courses.html">Courses <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="courses.html">All Courses</a></li>
+                            <li><a href="courses.html#quran-studies">Quran Studies</a></li>
+                            <li><a href="courses.html#bridge-course">Bridge Course</a></li>
+                            <li><a href="courses.html#higher-studies">Higher Studies</a></li>
+                            <li><a href="courses.html#orphan-home-care">Orphan Home Care</a></li>
+                            <li><a href="courses.html#islamic-civilization">Islamic Civilization</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-dropdown">
+                        <a href="organisation.html">Organisation <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="organisation.html?tab=swabah">Swabah</a></li>
+                            <li><a href="organisation.html?tab=nadi-dawa">Nadi Dawa</a></li>
+                            <li><a href="organisation.html?tab=qhsa">QHSA</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="donations.html">Donations</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top: 100px;">
+        <!-- Hero Section -->
+        <section class="hero" style="min-height: 50vh; padding-top: 80px;">
+            <div class="container hero-content">
+                <div class="hero-text" data-aos="fade-right">
+                    <h1 class="hero-title">News & Updates</h1>
+                    <p class="hero-description">Stay informed with the latest news, announcements, and important updates from Badrul Huda Academy.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Grid -->
+        <section class="section-padding">
+            <div class="container">
+                <div id="news-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: var(--space-lg);">
+                    <!-- News items will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section-padding" style="background: var(--primary); color: white; text-align: center;">
+            <div class="container" data-aos="zoom-in">
+                <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 20px;">Subscribe for Updates</h2>
+                <p style="margin-bottom: 40px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Get the latest news and important announcements delivered to you.</p>
+                <a href="contact.html" class="btn btn-primary" style="background: var(--accent); color: white;">
+                    <i class="fas fa-envelope" style="margin-right: 8px;"></i> Contact Us
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h4 style="color: white; font-size: 1.5rem; margin-bottom: 20px;">Badrul Huda Academy</h4>
+                    <p style="color: #a0aec0; font-size: 0.9rem;">Illuminating hearts and minds through authentic Islamic education and academic excellence since 1998.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="organisation.html">Organisation</a></li>
+                        <li><a href="faculty.html">Faculty</a></li>
+                        <li><a href="donations.html">Donations</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="courses.html#quran-studies">Quran Studies</a></li>
+                        <li><a href="courses.html#bridge-course">Bridge Course</a></li>
+                        <li><a href="courses.html#higher-studies">Higher Studies</a></li>
+                        <li><a href="courses.html#orphan-home-care">Orphan Home Care</a></li>
+                        <li><a href="courses.html#islamic-civilization">Islamic Civilization</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-location-dot"></i><span>Panamaram, Wayanad, Kerala</span></li>
+                        <li><i class="fas fa-phone"></i><span>+91 98765 43210</span></li>
+                        <li><i class="fas fa-envelope"></i><span>info@badrulhuda.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top: 1px solid #2d3748; padding-top: 30px; text-align: center; font-size: 0.85rem; color: #718096;">
+                <p>&copy; 2026 Badrul Huda Academy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Load and display news from localStorage
+        function loadNews() {
+            const newsContainer = document.getElementById('news-container');
+            const news = JSON.parse(localStorage.getItem('badrulHudaNews')) || [];
+
+            if (news.length === 0) {
+                // Show default empty state
+                newsContainer.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px;">
+                        <i class="fas fa-newspaper" style="font-size: 3rem; color: var(--border); margin-bottom: 20px; opacity: 0.3;"></i>
+                        <h3 style="color: var(--primary); font-size: 1.4rem; font-weight: 700; margin-bottom: 12px;">No News Available</h3>
+                        <p style="color: var(--text-muted); font-size: 1.02rem;">No news available at the moment. Check back soon!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Sort news by date (newest first)
+            news.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+            newsContainer.innerHTML = news.map((item, index) => {
+                const img = item.image ? `<div class="news-image"><img src="${item.image}" alt="${item.title}"></div>` : `<div class="news-image" style="background:#f1f5f9; display:flex; align-items:center; justify-content:center;"><i class="fas fa-newspaper" style="font-size:2rem; color:var(--border);"></i></div>`;
+                const excerpt = item.description.length > 200 ? item.description.substring(0, 200) + '...' : item.description;
+                return `
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="${(index % 3) * 100}">
+                        ${img}
+                        <div class="news-content">
+                            <div class="news-date">
+                                <i class="fas fa-calendar"></i> ${new Date(item.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                            </div>
+                            <h3 class="news-title">${item.title}</h3>
+                            <p class="news-description">${excerpt}</p>
+                            <a href="news_article.html?id=${item.id}" class="news-link">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+
+            // Reinitialize AOS
+            if (window.AOS) AOS.refresh();
+        }
+
+        // Load news on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.syncWithServer) {
+                window.syncWithServer(loadNews);
+            } else {
+                loadNews();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

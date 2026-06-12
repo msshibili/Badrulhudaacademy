@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Badrul Huda Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.jpg" alt="Badrul Huda">
+                    <div class="logo-text">Badrul Huda Academy<span>Panamaram</span></div>
+                </a>
+            </div>
+            <button class="mobile-nav-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav-links" id="nav-links">
+                <ul>
+                    <li class="nav-item-dropdown">
+                        <a href="about.html" class="active">About <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">About Us</a></li>
+                            <li class="nav-item-subdropdown">
+                                <a href="about.html#ventures-list" class="subdropdown-toggle">Ventures <i
+                                        class="fas fa-chevron-down"
+                                        style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                                <ul class="subdropdown-menu">
+                                    <li><a href="about.html?venture=0">Panamaram Campus</a></li>
+                                    <li><a href="about.html?venture=1">Happy Shelter for Boys</a></li>
+                                    <li><a href="about.html?venture=2">Higher Study Centre for Boys and Girls</a></li>
+                                    <li><a href="about.html?venture=3">Islamic Sharee'ath College</a></li>
+                                    <li><a href="about.html?venture=4">Secondary Madrassa</a></li>
+                                    <li><a href="about.html?venture=5">Thajul Ulama Dawa College</a></li>
+                                    <li><a href="about.html?venture=6">Karimbummal Jumua Masjid</a></li>
+                                    <li><a href="about.html?venture=7">V.A.M.B Madrassa Karimbummal</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="admin.html">Admin Portal</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-dropdown">
+                        <a href="courses.html">Courses <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="courses.html">All Courses</a></li>
+                            <li><a href="courses.html#quran-studies">Quran Studies</a></li>
+                            <li><a href="courses.html#bridge-course">Bridge Course</a></li>
+                            <li><a href="courses.html#higher-studies">Higher Studies</a></li>
+                            <li><a href="courses.html#orphan-home-care">Orphan Home Care</a></li>
+                            <li><a href="courses.html#islamic-civilization">Islamic Civilization</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-dropdown">
+                        <a href="organisation.html">Organisation <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="organisation.html?tab=swabah">Swabah</a></li>
+                            <li><a href="organisation.html?tab=nadi-dawa">Nadi Dawa</a></li>
+                            <li><a href="organisation.html?tab=qhsa">QHSA</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="donations.html">Donations</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top: 100px;">
+        <!-- Narrative Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+                    <div>
+                        <div class="section-head" style="text-align: left; margin-bottom: 24px;">
+                            <span>Our Legacy</span>
+                            <h2 style="font-size: 3rem;">A Tradition of Excellence</h2>
+                        </div>
+                        <p style="margin-bottom: 24px;">Badrul Huda Academy was established with a singular vision: to
+                            create a harmonious educational path where traditional Islamic sciences and modern academic
+                            disciplines reinforce one another.</p>
+                        <p style="margin-bottom: 32px;">Located in the serene landscapes of Wayanad, our academy
+                            provides a peaceful environment conducive to spiritual growth and intellectual discovery. We
+                            believe that true education illuminates the heart before it instructs the mind.</p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                            <div class="course-card" style="padding: 24px; text-align: center;">
+                                <h3 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 5px;">25+</h3>
+                                <p
+                                    style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--accent);">
+                                    Years of Wisdom</p>
+                            </div>
+                            <div class="course-card" style="padding: 24px; text-align: center;">
+                                <h3 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 5px;">100+</h3>
+                                <p
+                                    style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--accent);">
+                                    Active Students</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-image" style="height: 600px;">
+                        <img src="c:\Users\USER\Downloads\images (1).jpg" alt="Institute Architecture">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Vision -->
+        <section class="section-padding" style="background: var(--bg-alt);">
+            <div class="container">
+                <div class="grid-3">
+                    <div class="course-card" style="padding: 40px;">
+                        <div style="font-size: 2rem; color: var(--accent); margin-bottom: 20px;"><i
+                                class="fas fa-eye"></i></div>
+                        <h3 style="font-weight: 800;">Our Vision</h3>
+                        <p>To be a global beacon of enlightened Islamic education, producing leaders who balance
+                            spiritual depth with professional excellence.</p>
+                    </div>
+                    <div class="course-card"
+                        style="padding: 40px; background: var(--primary); color: white; border: none;">
+                        <div style="font-size: 2rem; color: var(--accent); margin-bottom: 20px;"><i
+                                class="fas fa-bullseye"></i></div>
+                        <h3 style="font-weight: 800; color: white;">Our Mission</h3>
+                        <p style="color: rgba(255,255,255,0.8);">To provide an integrated curriculum that empowers
+                            students with authentic knowledge, critical thinking skills, and noble character (Adab).</p>
+                    </div>
+                    <div class="course-card" style="padding: 40px;">
+                        <div style="font-size: 2rem; color: var(--accent); margin-bottom: 20px;"><i
+                                class="fas fa-heart"></i></div>
+                        <h3 style="font-weight: 800;">Our Values</h3>
+                        <p>Authenticity, Integrity, Community, and Excellence. We are committed to a gender-segregated,
+                            focused, and safe learning environment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Venture Section -->
+        <section class="section-padding" id="venture" style="background: white;">
+            <div class="container">
+                <div class="section-head">
+                    <span>Main Campus</span>
+                    <h2>Venture Environment & Facilities</h2>
+                    <p>Located in Wayanad, Kerala, our venture environments are designed to provide a serene space for
+                        contemplation and learning.</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 32px;"
+                    class="sponsorship-grid">
+                    <div>
+                        <h3 style="color: var(--primary); margin-bottom: 20px; font-size: 1.6rem; font-weight: 700;">A
+                            Peaceful Sanctuary for Knowledge</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 20px; line-height: 1.8;">
+                            At Badrul Huda Academy, our facilities combine traditional aesthetics with modern
+                            educational support. Set in the quiet hills of Wayanad, our eco-friendly ventures offer
+                            students a sanctuary to focus on moral, spiritual, and intellectual development.
+                        </p>
+                        <ul
+                            style="list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; color: var(--text-muted);">
+                            <li style="display: flex; align-items: center; gap: 8px;"><i class="fas fa-check"
+                                    style="color: var(--accent);"></i> Modern Smart Classrooms</li>
+                            <li style="display: flex; align-items: center; gap: 8px;"><i class="fas fa-check"
+                                    style="color: var(--accent);"></i> Extensive Library & Reading Rooms</li>
+                            <li style="display: flex; align-items: center; gap: 8px;"><i class="fas fa-check"
+                                    style="color: var(--accent);"></i> Comfortable Student Hostels</li>
+                            <li style="display: flex; align-items: center; gap: 8px;"><i class="fas fa-check"
+                                    style="color: var(--accent);"></i> Prayer Assembly Hall</li>
+                            <li style="display: flex; align-items: center; gap: 8px;"><i class="fas fa-check"
+                                    style="color: var(--accent);"></i> Sports Field & Play Area</li>
+                            <li style="display: flex; align-items: center; gap: 8px;"><i class="fas fa-check"
+                                    style="color: var(--accent);"></i> IT & Computer Center</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="hero-image" style="height: 380px; width: 100%;">
+                            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=800"
+                                alt="Badrul Huda Academy Venture">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ventures Accordion Section -->
+                <div style="margin-top: 60px;" id="ventures-list">
+                    <h3
+                        style="color: var(--primary); margin-bottom: 24px; font-size: 1.8rem; font-weight: 700; text-align: center;">
+                        Our Ventures</h3>
+                    <div class="accordion" style="max-width: 800px; margin: 0 auto;">
+
+                        <!-- Venture 1 -->
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">
+                                <span><i class="fas fa-school" style="color: var(--accent);"></i> Panamaram
+                                    Campus</span>
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>
+                                    Our central complex in Panamaram, Wayanad. This venture is the heart of Badrul Huda
+                                    Academy, housing the main administrative blocks, central library, boys' hostel, and
+                                    standard classrooms for higher studies.
+                                </p>
+                                <button type="button" class="btn btn-secondary btn-sm" onclick="openVentureModal(0)"
+                                    style="margin-bottom: 20px; padding: 8px 16px; font-size: 0.85rem; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-weight: 600; border: 1px solid var(--primary); background: transparent; color: var(--primary);">
+                                    Read More <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Venture 2 -->
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">
+                                <span><i class="fas fa-home" style="color: var(--accent);"></i> Happy Shelter for
+                                    Boys</span>
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>
+                                    Badrul Huda Educational Complex, established in the year 2004 with a motive to
+                                    support the downtrodden sections of the society to reach the pinnacle of success
+                                    focusing attention to the economically and educationally backward district of
+                                    Wayanad.
+                                </p>
+                                <button type="button" class="btn btn-secondary btn-sm" onclick="openVentureModal(1)"
+                                    style="margin-bottom: 20px; padding: 8px 16px; font-size: 0.85rem; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-weight: 600; border: 1px solid var(--primary); background: transparent; color: var(--primary);">
+                                    Read More <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Venture 3 -->
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">
+                                <span><i class="fas fa-graduation-cap" style="color: var(--accent);"></i> Higher Study
+                                    Centre for Boys and Girls</span>
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>
+                                    Supporting our students beyond higher secondary schooling. We guide and support
+                                    graduates to pursue professional degrees in medicine, engineering, nursing, and
+                                    management at various reputed organizations in India and the Gulf.
+                                </p>
+                                <button type="button" class="btn btn-secondary btn-sm" onclick="openVentureModal(2)"
+                                    style="margin-bottom: 20px; padding: 8px 16px; font-size: 0.85rem; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-weight: 600; border: 1px solid var(--primary); background: transparent; color: var(--primary);">
+                                    Read More <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Venture 4 -->
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">
+                                <span><i class="fas fa-book" style="color: var(--accent);"></i> Islamic Sharee'ath
+                                    College</span>
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>
+                                    Dedicated to advanced Islamic jurisprudence, theology, and classical Arabic
+                                    literature. This college grooms future religious scholars with deep spiritual
+                                    insights and contemporary awareness.
+                                </p>
+                                <button type="button" class="btn btn-secondary btn-sm" onclick="openVentureModal(3)"
+                                    style="margin-bottom: 20px; padding: 8px 16px; font-size: 0.85rem; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-weight: 600; border: 1px solid var(--primary); background: transparent; color: var(--primary);">
+                                    Read More <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Venture 5 -->
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">
+                                <span><i class="fas fa-child" style="color: var(--accent);"></i> Secondary
+                                    Madrassa</span>
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>
+                                    Providing foundational Islamic education, moral studies, and Quranic recitation for
+                                    young boys and girls, aligning traditional values with secondary school curriculum.
+                                </p>
+                                <button type="button" class="btn btn-secondary btn-sm" onclick="openVentureModal(4)"
+                                    style="margin-bottom: 20px; padding: 8px 16px; font-size: 0.85rem; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-weight: 600; border: 1px solid var(--primary); background: transparent; color: var(--primary);">
+                                    Read More <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Venture 6 -->
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">
+                                <span><i class="fas fa-bullhorn" style="color: var(--accent);"></i> Thajul Ulama Dawa
+                                    College</span>
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>
+                                    A specialized institute focused on Islamic propagation, public speaking, and
+                                    community outreach. The college nurtures student-led initiatives for social and
+                                    moral development.
+                                </p>
+                                <button type="button" class="btn btn-secondary btn-sm" onclick="openVentureModal(5)"
+                                    style="margin-bottom: 20px; padding: 8px 16px; font-size: 0.85rem; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-weight: 600; border: 1px solid var(--primary); background: transparent; color: var(--primary);">
+                                    Read More <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Venture 7 -->
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">
+                                <span><i class="fas fa-mosque" style="color: var(--accent);"></i> Karimbummal Jumua
+                                    Masjid</span>
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>
+                                    The spiritual anchor of the Karimbummal community. It hosts daily prayers, Friday
+                                    congregation sermons, and weekly community circles focused on spiritual
+                                    purification.
+                                </p>
+                                <button type="button" class="btn btn-secondary btn-sm" onclick="openVentureModal(6)"
+                                    style="margin-bottom: 20px; padding: 8px 16px; font-size: 0.85rem; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-weight: 600; border: 1px solid var(--primary); background: transparent; color: var(--primary);">
+                                    Read More <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Venture 8 -->
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">
+                                <span><i class="fas fa-book-open" style="color: var(--accent);"></i> V.A.M.B Madrassa
+                                    Karimbummal</span>
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>
+                                    Our local division offering primary moral and religious education in Karimbummal. It
+                                    is equipped with standard classrooms and focuses on child character development.
+                                </p>
+                                <button type="button" class="btn btn-secondary btn-sm" onclick="openVentureModal(7)"
+                                    style="margin-bottom: 20px; padding: 8px 16px; font-size: 0.85rem; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-weight: 600; border: 1px solid var(--primary); background: transparent; color: var(--primary);">
+                                    Read More <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h4 style="color: white; font-size: 1.5rem; margin-bottom: 20px;">Badrul Huda Academy</h4>
+                    <p style="color: #a0aec0; font-size: 0.9rem;">Illuminating hearts and minds through authentic
+                        Islamic education and academic excellence since 1998.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="organisation.html">Organisation</a></li>
+                        <li><a href="faculty.html">Faculty</a></li>
+                        <li><a href="donations.html">Donations</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="courses.html#quran-studies">Quran Studies</a></li>
+                        <li><a href="courses.html#bridge-course">Bridge Course</a></li>
+                        <li><a href="courses.html#higher-studies">Higher Studies</a></li>
+                        <li><a href="courses.html#orphan-home-care">Orphan Home Care</a></li>
+                        <li><a href="courses.html#islamic-civilization">Islamic Civilization</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-location-dot"></i><span>Panamaram, Wayanad, Kerala</span></li>
+                        <li><i class="fas fa-phone"></i><span>+91 98765 43210</span></li>
+                        <li><i class="fas fa-envelope"></i><span>info@badrulhuda.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="border-top: 1px solid #2d3748; padding-top: 30px; text-align: center; font-size: 0.85rem; color: #718096;">
+                <p>&copy; 2026 Badrul Huda Academy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Venture Detailed Modal -->
+    <div id="venture-modal" class="modal-overlay"
+        style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(5px); z-index: 10000; display: none; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
+        <div class="modal-card"
+            style="background: white; width: 90%; max-width: 650px; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); overflow: hidden; transform: translateY(30px); transition: transform 0.3s ease; position: relative;">
+            <button class="modal-close" onclick="closeVentureModal()"
+                style="position: absolute; top: 15px; right: 20px; background: rgba(255,255,255,0.85); border: none; font-size: 1.25rem; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--primary); z-index: 10; transition: var(--transition); box-shadow: var(--shadow-sm);"><i
+                    class="fas fa-times"></i></button>
+            <div id="modal-image-wrapper" style="height: 250px; width: 100%; position: relative;">
+                <img id="modal-img" src="" alt="Venture Image" style="width: 100%; height: 100%; object-fit: cover;">
+                <div
+                    style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); padding: 20px; color: white;">
+                    <h3 id="modal-title" style="font-size: 1.6rem; font-weight: 800; margin: 0; color: white;">Venture
+                        Title</h3>
+                </div>
+            </div>
+            <div style="padding: 24px; max-height: calc(100vh - 350px); overflow-y: auto;">
+                <p id="modal-desc"
+                    style="color: var(--text-muted); line-height: 1.8; margin-bottom: 20px; font-size: 1rem;">Detailed
+                    text goes here...</p>
+                <h4
+                    style="color: var(--primary); font-weight: 700; margin-bottom: 12px; font-size: 1.1rem; border-bottom: 1px solid var(--border); padding-bottom: 8px;">
+                    <i class="fas fa-star" style="color: var(--accent); margin-right: 8px;"></i> Key Features &
+                    Facilities</h4>
+                <ul id="modal-features"
+                    style="list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; color: var(--text-muted); font-size: 0.9rem;">
+                    <!-- Key features dynamically populated -->
+                </ul>
+            </div>
+            <div
+                style="padding: 16px 24px; border-top: 1px solid var(--border); display: flex; justify-content: flex-end; gap: 12px; background: var(--bg-alt);">
+                <a href="contact.html" class="btn btn-primary"
+                    style="padding: 8px 16px; font-size: 0.9rem; border-radius: 8px; background: var(--primary); color: white; display: inline-flex; align-items: center; gap: 8px;"><i
+                        class="fas fa-envelope"></i> Contact Office</a>
+                <button onclick="closeVentureModal()" class="btn btn-secondary"
+                    style="padding: 8px 16px; font-size: 0.9rem; border-radius: 8px; border: 1px solid var(--border); background: white; cursor: pointer;">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+    <script>
+        const ventureDetails = [
+            {
+                title: "Panamaram Campus",
+                image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=800",
+                desc: "Our central complex in Panamaram, Wayanad. This venture is the heart of Badrul Huda Academy, housing the main administrative blocks, central library, boys' hostel, and standard classrooms for higher studies. It features high-tech labs, green zones for students, and provides the baseline academic support for all undergraduate and post-graduate curriculums.",
+                features: ["Central Administrative block", "State-of-the-art Science Lab", "Vast Central Library with 5000+ books", "Premium student residential halls", "24/7 Academic support office", "Eco-friendly green campus zones"]
+            },
+            {
+                title: "Happy Shelter for Boys",
+                image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=800",
+                desc: "Established in 2004 to support the underprivileged sections of Wayanad. We provide destitute and poor children with quality standard education, computer training, and tailoring workshops, helping them achieve self-sufficiency. Our goal is to provide a home-like environment that nurtures their moral character, intellect, and physical well-being.",
+                features: ["Free housing and nutritious meals", "Full school tuition & stationery support", "Dedicated vocational training centers", "Tailoring and handcraft workshops", "Weekly counseling & mentoring sessions", "Safe indoor & outdoor sports areas"]
+            },
+            {
+                title: "Higher Study Centre for Boys and Girls",
+                image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=800",
+                desc: "Supporting our students beyond higher secondary schooling. We guide and support graduates to pursue professional degrees in medicine, engineering, nursing, and management at various reputed organizations in India and the Gulf. We conduct career guidance seminars, coordinate with global universities, and offer financial scholarships to meritorious students.",
+                features: ["Professional career guidance desk", "International university tie-ups", "Merit-based educational scholarships", "NEET/JEE & competitive exam training", "Alumni mentorship program networks", "Interview preparation bootcamps"]
+            },
+            {
+                title: "Islamic Sharee'ath College",
+                image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=800",
+                desc: "Dedicated to advanced Islamic jurisprudence, theology, and classical Arabic literature. This college grooms future religious scholars with deep spiritual insights and contemporary awareness. Students undergo rigorous training in Usul al-Fiqh, Tafseer, Hadith sciences, and comparative religions, equipping them to guide the community in modern times.",
+                features: ["Advanced Jurisprudence (Fiqh) curriculum", "Hadith analysis & authentication courses", "Classical Arabic literature studies", "Comparative religion workshops", "Public speaking & preaching seminars", "Published academic research journals"]
+            },
+            {
+                title: "Secondary Madrassa",
+                image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=800",
+                desc: "Providing foundational Islamic education, moral studies, and Quranic recitation for young boys and girls, aligning traditional values with secondary school curriculum. We emphasize character building, basic jurisprudence (Fard 'Ayn), and classical manners, helping kids develop a strong and healthy Islamic identity from an early age.",
+                features: ["Interactive Tajweed & Hifz circles", "Basic Islamic manners (Adab) sessions", "Moral storytelling and histories", "Coordinated school syllabus alignment", "Talented youth arts & speech fests", "Dedicated child care coordinators"]
+            },
+            {
+                title: "Thajul Ulama Dawa College",
+                image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=800",
+                desc: "A specialized institute focused on Islamic propagation, public speaking, and community outreach. The college nurtures student-led initiatives for social and moral development. Students are trained in digital media production, community organizing, journalism, and modern language translation to effectively share the peaceful message of Islam.",
+                features: ["Outreach and missionary training", "Digital media production workshops", "Modern translation & writing classes", "Community organizing workshops", "Weekly street-outreach programs", "Inter-faith dialogue coordinates"]
+            },
+            {
+                title: "Karimbummal Jumua Masjid",
+                image: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=800",
+                desc: "The spiritual anchor of the Karimbummal community. It hosts daily prayers, Friday congregation sermons, and weekly community circles focused on spiritual purification. The masjid also runs community reconciliation committees, distributes charity funds, and offers basic counseling to families in the area.",
+                features: ["Congregational Friday sermons", "Daily spiritual purification circles", "Local community charity fund desk", "Family reconciliation council", "Weekend adult Quran study circles", "Welfare coordination committees"]
+            },
+            {
+                title: "V.A.M.B Madrassa Karimbummal",
+                image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=800",
+                desc: "Our local division offering primary moral and religious education in Karimbummal. It is equipped with standard classrooms and focuses on child character development. We work closely with parents to ensure kids receive a healthy mix of primary standard education and moral upbringing.",
+                features: ["Primary moral education blocks", "Safe child play & activities yard", "Interactive multimedia classrooms", "Regular parent-teacher council meets", "Basic Arabic vocabulary training", "Monthly student progress updates"]
+            }
+        ];
+
+        function openVentureModal(index) {
+            const data = ventureDetails[index];
+            if (!data) return;
+
+            document.getElementById('modal-img').src = data.image;
+            document.getElementById('modal-title').textContent = data.title;
+            document.getElementById('modal-desc').textContent = data.desc;
+
+            const featuresList = document.getElementById('modal-features');
+            featuresList.innerHTML = data.features.map(f => `
+                <li style="display: flex; align-items: center; gap: 8px;"><i class="fas fa-check-circle" style="color: var(--primary); font-size: 0.95rem; margin-right: 4px;"></i> ${f}</li>
+            `).join('');
+
+            const modal = document.getElementById('venture-modal');
+            const card = modal.querySelector('.modal-card');
+
+            modal.style.display = 'flex';
+            // Force repaint
+            modal.offsetHeight;
+            setTimeout(() => {
+                modal.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 10);
+        }
+
+        function closeVentureModal() {
+            const modal = document.getElementById('venture-modal');
+            const card = modal.querySelector('.modal-card');
+
+            modal.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        }
+
+        // Close on click outside card
+        document.getElementById('venture-modal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('venture-modal')) {
+                closeVentureModal();
+            }
+        });
+    </script>
+</body>
+
+</html>

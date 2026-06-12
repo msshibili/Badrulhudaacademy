@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Programs | Badrul Huda Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .read-more-btn {
+            background: none;
+            border: none;
+            color: var(--accent);
+            font-weight: 600;
+            cursor: pointer;
+            padding: 0;
+            margin-left: 6px;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.jpg" alt="Badrul Huda">
+                    <div class="logo-text">Badrul Huda Academy<span>Panamaram</span></div>
+                </a>
+            </div>
+            <button class="mobile-nav-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav-links" id="nav-links">
+                <ul>
+                    <li class="nav-item-dropdown">
+                        <a href="about.html">About <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">About Us</a></li>
+                            <li class="nav-item-subdropdown">
+                                <a href="about.html#ventures-list" class="subdropdown-toggle">Ventures <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                                <ul class="subdropdown-menu">
+                                    <li><a href="about.html?venture=0">Panamaram Campus</a></li>
+                                    <li><a href="about.html?venture=1">Happy Shelter for Boys</a></li>
+                                    <li><a href="about.html?venture=2">Higher Study Centre for Boys and Girls</a></li>
+                                    <li><a href="about.html?venture=3">Islamic Sharee'ath College</a></li>
+                                    <li><a href="about.html?venture=4">Secondary Madrassa</a></li>
+                                    <li><a href="about.html?venture=5">Thajul Ulama Dawa College</a></li>
+                                    <li><a href="about.html?venture=6">Karimbummal Jumua Masjid</a></li>
+                                    <li><a href="about.html?venture=7">V.A.M.B Madrassa Karimbummal</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="admin.html">Admin Portal</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-dropdown">
+                        <a href="courses.html" class="active">Courses <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="courses.html">All Courses</a></li>
+                            <li><a href="courses.html#quran-studies">Quran Studies</a></li>
+                            <li><a href="courses.html#bridge-course">Bridge Course</a></li>
+                            <li><a href="courses.html#higher-studies">Higher Studies</a></li>
+                            <li><a href="courses.html#orphan-home-care">Orphan Home Care</a></li>
+                            <li><a href="courses.html#islamic-civilization">Islamic Civilization</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-dropdown">
+                        <a href="organisation.html">Organisation <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="organisation.html?tab=swabah">Swabah</a></li>
+                            <li><a href="organisation.html?tab=nadi-dawa">Nadi Dawa</a></li>
+                            <li><a href="organisation.html?tab=qhsa">QHSA</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="donations.html">Donations</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top: 100px;">
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-head">
+                    <span>Explore Our Programs</span>
+                    <h2>Comprehensive Academic Catalog</h2>
+                    <p>Designed to provide a deep understanding of Islamic sciences alongside modern disciplines.</p>
+                </div>
+
+                <div class="grid-3">
+                    <!-- Program 1 -->
+                    <div class="course-card" id="quran-studies">
+                        <div class="course-icon"><i class="fas fa-quran"></i></div>
+                        <h3>Quran Studies</h3>
+                        <p>Detailed study of pronunciation, memorization techniques, and the contextual exegesis
+                            (Tafseer) of the holy book.</p>
+                        <div style="border-top: 1px solid var(--border); padding-top: 20px; margin-top: 20px;">
+                            <span
+                                style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 10px;">Duration:
+                                5 Years | Level: All</span>
+                            <a href="admissions.html" class="btn btn-primary" style="width: 100%;">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Program 2 -->
+                    <div class="course-card" id="bridge-course">
+                        <div class="course-icon"><i class="fas fa-scroll"></i></div>
+                        <h3>Bridge Course</h3>
+                        <p>Understanding the methodology of Hadith collection, authentication, and the life of Prophet
+                            Muhammad (PBUH).</p>
+                        <div style="border-top: 1px solid var(--border); padding-top: 20px; margin-top: 20px;">
+                            <span
+                                style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 10px;">Duration:
+                                2 Years | Level: Advanced</span>
+                            <a href="admissions.html" class="btn btn-primary" style="width: 100%;">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Program 3 -->
+                    <div class="course-card" id="higher-studies">
+                        <div class="course-icon"><i class="fas fa-balance-scale"></i></div>
+                        <h3>Higher Studies</h3>
+                        <p>In-depth exploration of Sharia laws, ethical frameworks, and practical application in
+                            contemporary society.</p>
+                        <div style="border-top: 1px solid var(--border); padding-top: 20px; margin-top: 20px;">
+                            <span
+                                style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 10px;">Duration:
+                                4 Years | Level: Intermediate</span>
+                            <a href="admissions.html" class="btn btn-primary" style="width: 100%;">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Program 4 -->
+                    <div class="course-card" id="orphan-home-care">
+                        <div class="course-icon"><i class="fas fa-language"></i></div>
+                        <h3>Orphan Home Care</h3>
+                        <p>Complete immersion in Arabic grammar (Nahw), morphology (Sarf), and literature to unlock
+                            Quranic understanding.</p>
+                        <div style="border-top: 1px solid var(--border); padding-top: 20px; margin-top: 20px;">
+                            <span
+                                style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 10px;">Duration:
+                                1 Year | Level: Beginner</span>
+                            <a href="admissions.html" class="btn btn-primary" style="width: 100%;">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Program 5 -->
+                    <div class="course-card" id="islamic-civilization">
+                        <div class="course-icon"><i class="fas fa-history"></i></div>
+                        <h3>Islamic Civilization</h3>
+                        <p>A journey through history, exploring the contributions of Islamic scholars to science,
+                            medicine, and philosophy.</p>
+                        <div style="border-top: 1px solid var(--border); padding-top: 20px; margin-top: 20px;">
+                            <span
+                                style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 10px;">Duration:
+                                6 Months | Level: General</span>
+                            <a href="admissions.html" class="btn btn-primary" style="width: 100%;">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Program 6 -->
+                    <div class="course-card" style="background: var(--primary); color: white; border: none;">
+                        <h3 style="color: white; margin-top: 15px;">Custom Programs</h3>
+                        <p style="color: rgba(255,255,255,0.8);">We offer integrated weekend and short-term programs for
+                            working professionals and youth.</p>
+                        <a href="contact.html" class="btn btn-primary"
+                            style="background: var(--accent); color: white; margin-top: 20px;">Inquire Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h4 style="color: white; font-size: 1.5rem; margin-bottom: 20px;">Badrul Huda Academy</h4>
+                    <p style="color: #a0aec0; font-size: 0.9rem;">Illuminating hearts and minds through authentic
+                        Islamic education and academic excellence since 1998.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="organisation.html">Organisation</a></li>
+                        <li><a href="faculty.html">Faculty</a></li>
+                        <li><a href="donations.html">Donations</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="courses.html#quran-studies">Quran Studies</a></li>
+                        <li><a href="courses.html#bridge-course">Bridge Course</a></li>
+                        <li><a href="courses.html#higher-studies">Higher Studies</a></li>
+                        <li><a href="courses.html#orphan-home-care">Orphan Home Care</a></li>
+                        <li><a href="courses.html#islamic-civilization">Islamic Civilization</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-location-dot"></i><span>Panamaram, Wayanad, Kerala</span></li>
+                        <li><i class="fas fa-phone"></i><span>+91 98765 43210</span></li>
+                        <li><i class="fas fa-envelope"></i><span>info@badrulhuda.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="border-top: 1px solid #2d3748; padding-top: 30px; text-align: center; font-size: 0.85rem; color: #718096;">
+                <p>&copy; 2026 Badrul Huda Academy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const maxLen = 140;
+            document.querySelectorAll('.course-card > p').forEach(p => {
+                const full = p.textContent.trim();
+                if (full.length <= maxLen) return; // nothing to do
+
+                const excerpt = full.slice(0, maxLen).trim();
+                p.textContent = excerpt + '... ';
+
+                const btn = document.createElement('button');
+                btn.className = 'read-more-btn';
+                btn.type = 'button';
+                btn.textContent = 'Read more';
+                btn.addEventListener('click', () => {
+                    if (btn.textContent === 'Read more') {
+                        p.textContent = full + ' ';
+                        btn.textContent = 'Show less';
+                    } else {
+                        p.textContent = excerpt + '... ';
+                        btn.textContent = 'Read more';
+                    }
+                    p.appendChild(btn);
+                });
+
+                p.appendChild(btn);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
